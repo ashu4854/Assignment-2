@@ -89,7 +89,7 @@ public class Cluster implements ClusterInterface
      * @return double -- the weighted count of ballot papers in the cluster
      * 
      * Precondition: None
-     * Postcondition: the weighted count of ballots in the cluster is
+     * Postcondition: the weighted count of ballot papers in the cluster is
      *                  returned.
      * Informally: Get the weighted count of ballot papers in the cluster.
      */
@@ -245,7 +245,15 @@ public class Cluster implements ClusterInterface
      */
     public String toString()
     {
-        //COMPLETE ME!!!
-        return "UNFINISHED";  // change me -- this is just to allow the program to compile
+        String result;
+
+        result = "";
+
+        for (int i = 0; i < rawCount; i++)
+        {
+            result += ballots[i].toString() + "\n";
+        }
+
+        return result;
     }
 }
