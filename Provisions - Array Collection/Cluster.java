@@ -209,8 +209,32 @@ return count;
 	 */
     public Ballot transfer(double residual)
     {
-//COMPLETE ME!!!
-        return null;  // change me -- this is just to allow the program to compile
+      Ballot result;
+
+if (rawCount == 0)
+{
+    return null;
+}
+
+result = ballots[0];
+
+for (int i = 1; i < rawCount; i++)
+{
+    ballots[i - 1] = ballots[i];
+}
+
+rawCount--;
+weightedCount -= result.getWeight();
+
+result.update();
+
+if (residual != -1)
+{
+    result.setWeight(residual);
+}
+
+return result;
+       
     }
 
 	/**
