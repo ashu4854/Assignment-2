@@ -56,8 +56,8 @@ public class Collection implements CollectionInterface
 	 */
     public boolean isEmpty()
     {
-//COMPLETE ME!!!
-        return false;  // change me -- this is just to allow the program to compile
+     return numCandidates == 0;
+
     }
 
     /**
