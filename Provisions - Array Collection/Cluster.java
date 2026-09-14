@@ -13,6 +13,7 @@ public class Cluster implements ClusterInterface
     protected String bundleName;        // candidate for whom this cluster of votes is for
     protected double weightedCount;     // weight of votes in this cluster
     protected int rawCount;             // raw count of votes in this cluster
+	protected Ballot []ballots;
 
 	/**
 	 * Constructor
@@ -48,8 +49,7 @@ public class Cluster implements ClusterInterface
 	 */
     public boolean isEmpty()
     {
-//COMPLETE ME!!!
-        return rawCount == 0;  // change me -- this is just to allow the program to compile
+        return rawCount == 0;  
     }
 
  	/**
@@ -64,8 +64,13 @@ public class Cluster implements ClusterInterface
 	 */
     public Ballot getFirstBallot()
     {
-//COMPLETE ME!!!
-        return null;    // change me -- this is just to allow the program to compile
+        if (rawCount == 0)
+    {
+        return null;
+    }
+
+    return ballots[0]; 
+
     }
 
  	/**
