@@ -172,8 +172,19 @@ weightedCount += votes.getWeight();
 	 */
     public int votesFor(String candidate, int preference)
     {
-//COMPLETE ME!!!
-        return -1;  // change me -- this is just to allow the program to compile
+      int count = 0;
+
+for (int i = 0; i < rawCount; i++)
+{
+    if (preference < ballots[i].getMaxVote() &&
+        ballots[i].getVotes()[preference].equalsIgnoreCase(candidate))
+    {
+        count++;
+    }
+}
+
+return count;
+
     }
 
  	/**
