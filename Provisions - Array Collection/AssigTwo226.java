@@ -31,17 +31,17 @@ public class AssigTwo226
     public static void main(String []args)
     {
 		// final local variables
-		final String FILENAME = "votes.csv";	// Filename of the file holding the dataset
-		final int LIMIT = Integer.MAX_VALUE;    // number of votes to process; reduce to, e.g., 1 then 10 then 50 then 100, then 1000, then Integer.MAX_VALUE when debugging
-		final int POSITIONS = 4;				// Number of positions to elect; reduce to, e.g., 1 then 2, then 4 when debugging
+		final String FILENAME = "votes.csv";
+		final int LIMIT = 10;
+		final int POSITIONS = 1;
 
 		// non final local variables
-		FileHandler myFile;		// object for file handling
-		Collection collection;	// collection of data within the program
-		Scanner sc;				// scanner for input
-		String candidate;		// candidate name for summary
-		int round;				// round number of preference distribution
-		String outcome;			// result of preference distribution for the round
+		FileHandler myFile;
+		Collection collection;
+		Scanner sc;
+		String candidate;
+		int round;
+		String outcome;
 
 		// produce title
 		System.out.println();
@@ -85,14 +85,14 @@ public class AssigTwo226
 		System.out.print("Using the Hare-Clark Electoral System to fill " + POSITIONS);
 		System.out.println(POSITIONS == 1 ? " vacancy..." : " vacancies...");
 		round = 1;
-		outcome = collection.distributePreferences();	// complete round 1
-		while (! outcome.equals(""))	// more rounds required
+		outcome = collection.distributePreferences();
+		while (! outcome.equals(""))
 		{
-			System.out.println("Outcome of round " + round + ": " + outcome);	// show outcome from this round
-			collection.showDistribution();	// show current vote distribution of remaining candidates
+			System.out.println("Outcome of round " + round + ": " + outcome);
+			collection.showDistribution();
 
-			round++;	// move to next round
-			outcome = collection.distributePreferences();	// complete distribution for that round
+			round++;
+			outcome = collection.distributePreferences();
 		}
 		/**/
 
