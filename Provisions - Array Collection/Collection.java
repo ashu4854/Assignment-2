@@ -104,7 +104,34 @@ public class Collection implements CollectionInterface
 	 */
     public void addBallotToCollection(Ballot votes)
     {
-//COMPLETE ME!!!
+      int i;
+String []names;
+String candidate;
+
+if (numCandidates == 0)
+{
+    names = votes.getVotes();
+
+    for (i = 0; i < names.length; i++)
+    {
+        candidates[numCandidates] = new Cluster(names[i]);
+        numCandidates++;
+    }
+
+    electorateName = votes.getElectorate();
+}
+
+candidate = votes.getSelection();
+
+for (i = 0; i < numCandidates; i++)
+{
+    if (candidates[i].getBundleName().equalsIgnoreCase(candidate))
+    {
+        candidates[i].addBallotToCluster(votes);
+        numBallots++;
+        break;
+    }
+}
     }
 
     /**
