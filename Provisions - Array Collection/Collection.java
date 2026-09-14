@@ -511,9 +511,52 @@ numCandidates--;
 	 */
     public String distributePreferences()
     {
-//COMPLETE ME!!!
-        return "UNFINISHED";  // change me -- this is just to allow the program to compile
+      final int CANDIDATE = 0;
+final int VALUE = 1;
+
+double []votes;
+int index;
+String result;
+
+result = "";
+
+if (isEmpty())
+{
+    System.out.println("No data!");
+}
+else if (numElected < NUMBER_TO_BE_ELECTED)
+{
+    votes = maxVotes();
+
+    if (votes[VALUE] >= quota)
+    {
+        index = (int)votes[CANDIDATE];
+
+        result = String.format(
+            "%s is ELECTED with %d/%d weighted votes!",
+            candidates[index].getBundleName(),
+            (int)votes[VALUE],
+            quota);
+
+        elect(index);
     }
+    else
+    {
+        votes = minVotes();
+        index = (int)votes[CANDIDATE];
+
+        result = String.format(
+            "%s is ELIMINATED with %d/%d weighted votes!",
+            candidates[index].getBundleName(),
+            (int)votes[VALUE],
+            quota);
+
+        eliminate(index);
+    }
+}
+
+return result;
+        }
 
 	/**
 	 * toString()
