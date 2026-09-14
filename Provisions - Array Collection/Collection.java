@@ -224,7 +224,21 @@ else
 	 */
     public void showCandidateVotes(String candidate)
     {
-//COMPLETE ME!!!
+      int votes;
+
+System.out.println(candidate + ":");
+
+for (int i = 0; i < numCandidates; i++)
+{
+    votes = candidates[i].votesFor(candidate, i);
+
+    for (int j = 0; j < votes / 150; j++)
+    {
+        System.out.print("*");
+    }
+
+    System.out.printf(" %d%n", votes);
+}
     }
 
     /**
