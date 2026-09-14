@@ -3,8 +3,8 @@
  * 
  * KIT107 Assignment 2 -- Collection Implementation
  * 
- * @author <<your name and student ID number>>
- * @version	<<date of completion>>
+ * @author <<Ashutosh Sharma and 777197>>
+ * @version	<<15/09/2026>>
  */
 
 
@@ -22,7 +22,7 @@ public class Collection implements CollectionInterface
     protected int numCandidates;    // the number of candidates still in the election
     protected int numBallots;       // how many ballot papers were submitted this election
     protected int numElected;       // the number of confirmed elections so far
-
+    protected Cluster []candidates;
 	/**
 	 * Constructor
 	 * 
@@ -35,7 +35,13 @@ public class Collection implements CollectionInterface
 	 */
     public Collection(int numReps)
     {
-//COMPLETE ME!!!
+      NUMBER_TO_BE_ELECTED = numReps;
+      quota = 0;
+      electorateName = "";
+      numCandidates = 0;
+      numBallots = 0;
+      numElected = 0;
+      candidates = new Cluster[MAX_CANDIDATES];
     }
 
 	/**
