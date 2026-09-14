@@ -49,7 +49,7 @@ public class Cluster implements ClusterInterface
     public boolean isEmpty()
     {
 //COMPLETE ME!!!
-        return false;  // change me -- this is just to allow the program to compile
+        return rawCount == 0;  // change me -- this is just to allow the program to compile
     }
 
  	/**
