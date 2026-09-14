@@ -129,7 +129,31 @@ public class Cluster implements ClusterInterface
 	 */
     public void addBallotToCluster(Ballot votes)
     {
-//COMPLETE ME!!!
+      if (rawCount == this.ballots.length)
+{
+    Ballot []newBallots = new Ballot[rawCount + 1];
+
+    for (int i = 0; i < rawCount; i++)
+    {
+        newBallots[i] = this.ballots[i];
+    }
+
+    this.ballots = newBallots;
+}
+
+int position = rawCount;
+
+while (position > 0 &&
+       this.ballots[position - 1].getChoice() > votes.getChoice())
+{
+    this.ballots[position] = this.ballots[position - 1];
+    position--;
+}
+
+this.ballots[position] = votes;
+
+rawCount++;
+weightedCount += votes.getWeight();
     }
 
  	/**
