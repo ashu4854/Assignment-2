@@ -397,7 +397,35 @@ for (int i = 0; i < numCandidates; i++)
 	 */
     protected void transfer(int index, double residual)
     {
-//COMPLETE ME!!!
+      int i;
+Ballot ballot;
+
+while (!candidates[index].isEmpty())
+{
+    ballot = candidates[index].transfer(residual);
+
+    if (ballot != null)
+    {
+        while (!ballot.exhausted() &&
+               !inTheRunning(ballot.getSelection()))
+        {
+            ballot.update();
+        }
+
+        if (!ballot.exhausted())
+        {
+            addBallotToCollection(ballot);
+        }
+    }
+}
+
+for (i = index; i < numCandidates - 1; i++)
+{
+    candidates[i] = candidates[i + 1];
+}
+
+candidates[numCandidates - 1] = null;
+numCandidates--;
     }
 
     /**
