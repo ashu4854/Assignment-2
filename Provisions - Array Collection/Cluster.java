@@ -3,8 +3,8 @@
  * 
  * KIT107 Assignment 2 -- Cluster Implementation
  * 
- * @author <<your name and student ID number>>
- * @version	<<date of completion>>
+ * @author <<Ashutosh Sharma 777197>>
+ * @version	<<15/09/2026>>
  */
 
 public class Cluster implements ClusterInterface
@@ -27,7 +27,13 @@ public class Cluster implements ClusterInterface
 	 */
     public Cluster(String candidate)
     {
-//COMPLETE ME!!!
+      public Cluster(String candidate)
+{
+    bundleName = candidate;
+    weightedCount = 0.0;
+    rawCount = 0;
+    ballots = new Ballot[0];
+}
     }
 
 	/**
