@@ -178,7 +178,28 @@ for (i = 0; i < numCandidates; i++)
 	 */
     public void showDistribution()
     {
-//COMPLETE ME!!!
+      System.out.println("Vote Distribution:");
+
+if (numBallots == 0)
+{
+    System.out.println("No data!");
+}
+else
+{
+    for (int i = 0; i < numCandidates; i++)
+    {
+        System.out.printf("%-10s", candidates[i].getBundleName());
+
+        for (int j = 0; j < candidates[i].getRawCount() / 150; j++)
+        {
+            System.out.print("*");
+        }
+
+        System.out.printf(" %d %.6f%n",
+            candidates[i].getRawCount(),
+            candidates[i].getWeightedCount());
+    }
+}
     }
 
     /**
