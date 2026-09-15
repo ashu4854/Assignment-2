@@ -80,7 +80,7 @@ public class AssigTwo226
 		collection.showCandidateVotes(candidate);
 	
 
-		/* uncomment when developing distributePreferences() * /
+		
 		// conduct the distribution of preferences until the required number of people are elected
 		System.out.print("Using the Hare-Clark Electoral System to fill " + POSITIONS);
 		System.out.println(POSITIONS == 1 ? " vacancy..." : " vacancies...");
@@ -94,7 +94,7 @@ public class AssigTwo226
 			round++;
 			outcome = collection.distributePreferences();
 		}
-		/**/
+		
 
 		// close the Scanner object
 		sc.close();
