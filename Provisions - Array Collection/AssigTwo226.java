@@ -28,12 +28,12 @@ public class AssigTwo226
 	 * Informally: Read the datafile, store it, process it, and produce the
 	 * 					results.
 	 */
-    public static void main(String []args)
-    {
-		// final local variables
-		final String FILENAME = "votes.csv";
-		final int LIMIT = 10;
-		final int POSITIONS = 1;
+		public static void main(String []args)
+		{
+			// final local variables
+			final String FILENAME = "votes.csv";
+			final int LIMIT = 50;
+			final int POSITIONS = 2;
 
 		// non final local variables
 		FileHandler myFile;
