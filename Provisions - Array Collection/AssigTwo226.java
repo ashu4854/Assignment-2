@@ -32,8 +32,8 @@ public class AssigTwo226
 		{
 			// final local variables
 			final String FILENAME = "votes.csv";
-			final int LIMIT = 50;
-			final int POSITIONS = 2;
+			final int LIMIT = Integer.MAX_VALUE;
+			final int POSITIONS = 4;
 
 		// non final local variables
 		FileHandler myFile;
