@@ -61,10 +61,10 @@ public class AssigTwo226
 		System.out.println(collection.toString());
 		/**/
 
-		/* uncomment when developing showDistribution() * /
+		
 		// produce histogram of raw votes per candidate
 		collection.showDistribution();
-		/**/
+		
 
 		/* uncomment when developing showCandidateVotes() * /
 		// display all preferences for a candidate of the users' choice
