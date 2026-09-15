@@ -66,7 +66,7 @@ public class AssigTwo226
 		collection.showDistribution();
 		
 
-		/* uncomment when developing showCandidateVotes() * /
+	
 		// display all preferences for a candidate of the users' choice
 		System.out.print("Enter name of candidate: ");
 		candidate = sc.nextLine();
@@ -78,7 +78,7 @@ public class AssigTwo226
 			candidate = sc.nextLine();
 		}
 		collection.showCandidateVotes(candidate);
-		/**/
+	
 
 		/* uncomment when developing distributePreferences() * /
 		// conduct the distribution of preferences until the required number of people are elected
