@@ -6,7 +6,16 @@
  * @author <<Ashutosh Sharma 777197>>
  * @version <<15/09/2026>>
  */
-
+/**
+ * (a)I would use a List ADT to model the cluster of ballots.
+ * A list allows ballots to be stored in order and added to the cluster,
+ * and removed when they need to be transferred to another candidate. 
+ * This fulfills the requirement that ballots are kept in order of preference, highest to lowest.
+ * 
+ * (b)I would use an array as the underlying data structure for the cluster. 
+ * An array can store ballots in preference order,providing direct access by position.
+ * The array can also be resized if the numbers of ballots to be added to the cluster is large.
+ */
 public class Cluster implements ClusterInterface
 {
     // instance variables
