@@ -221,24 +221,26 @@ for (i = 0; i < numCandidates; i++)
 	 * Informally: Print the horizontal histogram of ballots per preference
      *                  for the given candidate
 	 */
-    public void showCandidateVotes(String candidate)
-    {
-      int votes;
-
-System.out.println(candidate + ":");
-
-for (int i = 0; i < numCandidates; i++)
+public void showCandidateVotes(String candidate)
 {
-    votes = candidates[i].votesFor(candidate, i);
+    int votes;
 
-    for (int j = 0; j < votes / 150; j++)
+    System.out.println("Raw Vote Allocation for " + candidate + ":");
+
+    for (int i = 0; i < numCandidates; i++)
     {
-        System.out.print("*");
-    }
+        votes = candidates[i].votesFor(candidate, i);
 
-    System.out.printf(" %d%n", votes);
-}
+        System.out.printf("Preference %4d | ", i + 1);
+
+        for (int j = 0; j < votes / 150; j++)
+        {
+            System.out.print("*");
+        }
+
+        System.out.printf(" %d%n", votes);
     }
+}
 
     /**
 	 * closeElection()
