@@ -7,6 +7,16 @@
  * @version	<<15/09/2026>>
  */
 
+/**
+ * (c)I would use a List ADT to represent the collection of candidate clusters.
+ *  A list lets you store the clusters in an ordered collection and access them by their position.
+ *  It also allows adding, removing and searching clusters as candidates are elected or eliminated.
+ * 
+ * (d)I'd use an array as the underlying data structure for the collection. 
+ *  The array gives direct access to each candidate cluster by its position, 
+ *  which is useful for finding and processing candidates in each voting round.
+ *  It is also fair as the number of candidates is limited.
+ */
 
 public class Collection implements CollectionInterface
 {
