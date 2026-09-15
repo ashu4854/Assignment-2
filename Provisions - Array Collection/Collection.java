@@ -123,14 +123,18 @@ if (numCandidates == 0)
 
 candidate = votes.getSelection();
 
-for (i = 0; i < numCandidates; i++)
+i = 0;
+
+while (i < numCandidates &&
+       !candidates[i].getBundleName().equalsIgnoreCase(candidate))
 {
-    if (candidates[i].getBundleName().equalsIgnoreCase(candidate))
-    {
-        candidates[i].addBallotToCluster(votes);
-        numBallots++;
-        break;
-    }
+    i++;
+}
+
+if (i < numCandidates)
+{
+    candidates[i].addBallotToCluster(votes);
+    numBallots++;
 }
     }
 
